@@ -30,6 +30,12 @@ namespace Display
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RoleCb = new System.Windows.Forms.ComboBox();
+            this.BackToMenuLbl = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.IdTb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.FindBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.LastNameTb = new System.Windows.Forms.TextBox();
@@ -41,12 +47,6 @@ namespace Display
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.UsernameTb = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.IdTb = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.BackToMenuLbl = new System.Windows.Forms.Label();
-            this.RoleCb = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,13 +75,69 @@ namespace Display
             this.panel1.Size = new System.Drawing.Size(344, 446);
             this.panel1.TabIndex = 0;
             // 
+            // RoleCb
+            // 
+            this.RoleCb.FormattingEnabled = true;
+            this.RoleCb.Location = new System.Drawing.Point(156, 357);
+            this.RoleCb.Name = "RoleCb";
+            this.RoleCb.Size = new System.Drawing.Size(126, 23);
+            this.RoleCb.TabIndex = 17;
+            // 
+            // BackToMenuLbl
+            // 
+            this.BackToMenuLbl.AutoSize = true;
+            this.BackToMenuLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BackToMenuLbl.Location = new System.Drawing.Point(-3, -3);
+            this.BackToMenuLbl.Name = "BackToMenuLbl";
+            this.BackToMenuLbl.Size = new System.Drawing.Size(62, 25);
+            this.BackToMenuLbl.TabIndex = 16;
+            this.BackToMenuLbl.Text = "Menu";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(322, -4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 25);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // IdTb
+            // 
+            this.IdTb.Location = new System.Drawing.Point(158, 98);
+            this.IdTb.Name = "IdTb";
+            this.IdTb.Size = new System.Drawing.Size(124, 23);
+            this.IdTb.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(111, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Id ->";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(63, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 32);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Update User By Id";
+            // 
             // FindBtn
             // 
             this.FindBtn.BackColor = System.Drawing.SystemColors.Highlight;
             this.FindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FindBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FindBtn.ForeColor = System.Drawing.Color.White;
-            this.FindBtn.Location = new System.Drawing.Point(63, 144);
+            this.FindBtn.Location = new System.Drawing.Point(179, 139);
             this.FindBtn.Name = "FindBtn";
             this.FindBtn.Size = new System.Drawing.Size(103, 28);
             this.FindBtn.TabIndex = 11;
@@ -94,7 +150,7 @@ namespace Display
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UpdateBtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpdateBtn.Location = new System.Drawing.Point(172, 144);
+            this.UpdateBtn.Location = new System.Drawing.Point(174, 399);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(108, 28);
             this.UpdateBtn.TabIndex = 10;
@@ -178,62 +234,6 @@ namespace Display
             this.UsernameTb.Name = "UsernameTb";
             this.UsernameTb.Size = new System.Drawing.Size(124, 23);
             this.UsernameTb.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(63, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 32);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Update User By Id";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(111, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 25);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Id ->";
-            // 
-            // IdTb
-            // 
-            this.IdTb.Location = new System.Drawing.Point(158, 98);
-            this.IdTb.Name = "IdTb";
-            this.IdTb.Size = new System.Drawing.Size(124, 23);
-            this.IdTb.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(322, -4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 25);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "X";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // BackToMenuLbl
-            // 
-            this.BackToMenuLbl.AutoSize = true;
-            this.BackToMenuLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackToMenuLbl.Location = new System.Drawing.Point(-3, -3);
-            this.BackToMenuLbl.Name = "BackToMenuLbl";
-            this.BackToMenuLbl.Size = new System.Drawing.Size(62, 25);
-            this.BackToMenuLbl.TabIndex = 16;
-            this.BackToMenuLbl.Text = "Menu";
-            // 
-            // RoleCb
-            // 
-            this.RoleCb.FormattingEnabled = true;
-            this.RoleCb.Location = new System.Drawing.Point(156, 357);
-            this.RoleCb.Name = "RoleCb";
-            this.RoleCb.Size = new System.Drawing.Size(126, 23);
-            this.RoleCb.TabIndex = 17;
             // 
             // UpdateUserById
             // 

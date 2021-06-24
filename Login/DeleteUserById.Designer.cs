@@ -30,6 +30,10 @@ namespace Display
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UserThatDidTheLastChangeLbl = new System.Windows.Forms.Label();
+            this.LastChangeLbl = new System.Windows.Forms.Label();
+            this.IdOfCreator = new System.Windows.Forms.Label();
+            this.DateOfCreationLbl = new System.Windows.Forms.Label();
             this.BackToMenuLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.IdTb = new System.Windows.Forms.TextBox();
@@ -42,10 +46,6 @@ namespace Display
             this.FirstNameLbl = new System.Windows.Forms.Label();
             this.PasswordLbl = new System.Windows.Forms.Label();
             this.UsernameLbl = new System.Windows.Forms.Label();
-            this.DateOfCreationLbl = new System.Windows.Forms.Label();
-            this.IdOfCreator = new System.Windows.Forms.Label();
-            this.LastChangeLbl = new System.Windows.Forms.Label();
-            this.UserThatDidTheLastChangeLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,46 @@ namespace Display
             this.panel1.Size = new System.Drawing.Size(344, 446);
             this.panel1.TabIndex = 1;
             // 
+            // UserThatDidTheLastChangeLbl
+            // 
+            this.UserThatDidTheLastChangeLbl.AutoSize = true;
+            this.UserThatDidTheLastChangeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserThatDidTheLastChangeLbl.Location = new System.Drawing.Point(29, 376);
+            this.UserThatDidTheLastChangeLbl.Name = "UserThatDidTheLastChangeLbl";
+            this.UserThatDidTheLastChangeLbl.Size = new System.Drawing.Size(283, 25);
+            this.UserThatDidTheLastChangeLbl.TabIndex = 20;
+            this.UserThatDidTheLastChangeLbl.Text = "<User that did the last change>";
+            // 
+            // LastChangeLbl
+            // 
+            this.LastChangeLbl.AutoSize = true;
+            this.LastChangeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LastChangeLbl.Location = new System.Drawing.Point(93, 351);
+            this.LastChangeLbl.Name = "LastChangeLbl";
+            this.LastChangeLbl.Size = new System.Drawing.Size(142, 25);
+            this.LastChangeLbl.TabIndex = 19;
+            this.LastChangeLbl.Text = "<Last Change>";
+            // 
+            // IdOfCreator
+            // 
+            this.IdOfCreator.AutoSize = true;
+            this.IdOfCreator.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IdOfCreator.Location = new System.Drawing.Point(92, 326);
+            this.IdOfCreator.Name = "IdOfCreator";
+            this.IdOfCreator.Size = new System.Drawing.Size(150, 25);
+            this.IdOfCreator.TabIndex = 18;
+            this.IdOfCreator.Text = "<Id Of Creator>";
+            // 
+            // DateOfCreationLbl
+            // 
+            this.DateOfCreationLbl.AutoSize = true;
+            this.DateOfCreationLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DateOfCreationLbl.Location = new System.Drawing.Point(76, 301);
+            this.DateOfCreationLbl.Name = "DateOfCreationLbl";
+            this.DateOfCreationLbl.Size = new System.Drawing.Size(183, 25);
+            this.DateOfCreationLbl.TabIndex = 17;
+            this.DateOfCreationLbl.Text = "<Date Of Creation>";
+            // 
             // BackToMenuLbl
             // 
             this.BackToMenuLbl.AutoSize = true;
@@ -95,7 +135,7 @@ namespace Display
             // 
             // IdTb
             // 
-            this.IdTb.Location = new System.Drawing.Point(137, 98);
+            this.IdTb.Location = new System.Drawing.Point(116, 98);
             this.IdTb.Name = "IdTb";
             this.IdTb.Size = new System.Drawing.Size(124, 23);
             this.IdTb.TabIndex = 14;
@@ -104,7 +144,7 @@ namespace Display
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(88, 97);
+            this.label7.Location = new System.Drawing.Point(63, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 25);
             this.label7.TabIndex = 13;
@@ -126,7 +166,7 @@ namespace Display
             this.FindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FindBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FindBtn.ForeColor = System.Drawing.Color.White;
-            this.FindBtn.Location = new System.Drawing.Point(60, 145);
+            this.FindBtn.Location = new System.Drawing.Point(116, 127);
             this.FindBtn.Name = "FindBtn";
             this.FindBtn.Size = new System.Drawing.Size(108, 28);
             this.FindBtn.TabIndex = 11;
@@ -139,7 +179,7 @@ namespace Display
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DeleteBtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.DeleteBtn.Location = new System.Drawing.Point(174, 145);
+            this.DeleteBtn.Location = new System.Drawing.Point(107, 404);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(108, 28);
             this.DeleteBtn.TabIndex = 10;
@@ -150,7 +190,7 @@ namespace Display
             // 
             this.RoleLbl.AutoSize = true;
             this.RoleLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RoleLbl.Location = new System.Drawing.Point(122, 299);
+            this.RoleLbl.Location = new System.Drawing.Point(124, 276);
             this.RoleLbl.Name = "RoleLbl";
             this.RoleLbl.Size = new System.Drawing.Size(75, 25);
             this.RoleLbl.TabIndex = 5;
@@ -160,7 +200,7 @@ namespace Display
             // 
             this.LastNameLbl.AutoSize = true;
             this.LastNameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LastNameLbl.Location = new System.Drawing.Point(99, 274);
+            this.LastNameLbl.Location = new System.Drawing.Point(101, 251);
             this.LastNameLbl.Name = "LastNameLbl";
             this.LastNameLbl.Size = new System.Drawing.Size(129, 25);
             this.LastNameLbl.TabIndex = 4;
@@ -170,7 +210,7 @@ namespace Display
             // 
             this.FirstNameLbl.AutoSize = true;
             this.FirstNameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FirstNameLbl.Location = new System.Drawing.Point(99, 249);
+            this.FirstNameLbl.Location = new System.Drawing.Point(102, 226);
             this.FirstNameLbl.Name = "FirstNameLbl";
             this.FirstNameLbl.Size = new System.Drawing.Size(132, 25);
             this.FirstNameLbl.TabIndex = 3;
@@ -180,7 +220,7 @@ namespace Display
             // 
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PasswordLbl.Location = new System.Drawing.Point(108, 224);
+            this.PasswordLbl.Location = new System.Drawing.Point(107, 197);
             this.PasswordLbl.Name = "PasswordLbl";
             this.PasswordLbl.Size = new System.Drawing.Size(117, 25);
             this.PasswordLbl.TabIndex = 2;
@@ -190,51 +230,11 @@ namespace Display
             // 
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UsernameLbl.Location = new System.Drawing.Point(106, 199);
+            this.UsernameLbl.Location = new System.Drawing.Point(104, 170);
             this.UsernameLbl.Name = "UsernameLbl";
             this.UsernameLbl.Size = new System.Drawing.Size(124, 25);
             this.UsernameLbl.TabIndex = 1;
             this.UsernameLbl.Text = "<Username>";
-            // 
-            // DateOfCreationLbl
-            // 
-            this.DateOfCreationLbl.AutoSize = true;
-            this.DateOfCreationLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DateOfCreationLbl.Location = new System.Drawing.Point(72, 324);
-            this.DateOfCreationLbl.Name = "DateOfCreationLbl";
-            this.DateOfCreationLbl.Size = new System.Drawing.Size(183, 25);
-            this.DateOfCreationLbl.TabIndex = 17;
-            this.DateOfCreationLbl.Text = "<Date Of Creation>";
-            // 
-            // IdOfCreator
-            // 
-            this.IdOfCreator.AutoSize = true;
-            this.IdOfCreator.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.IdOfCreator.Location = new System.Drawing.Point(88, 349);
-            this.IdOfCreator.Name = "IdOfCreator";
-            this.IdOfCreator.Size = new System.Drawing.Size(150, 25);
-            this.IdOfCreator.TabIndex = 18;
-            this.IdOfCreator.Text = "<Id Of Creator>";
-            // 
-            // LastChangeLbl
-            // 
-            this.LastChangeLbl.AutoSize = true;
-            this.LastChangeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LastChangeLbl.Location = new System.Drawing.Point(88, 374);
-            this.LastChangeLbl.Name = "LastChangeLbl";
-            this.LastChangeLbl.Size = new System.Drawing.Size(142, 25);
-            this.LastChangeLbl.TabIndex = 19;
-            this.LastChangeLbl.Text = "<Last Change>";
-            // 
-            // UserThatDidTheLastChangeLbl
-            // 
-            this.UserThatDidTheLastChangeLbl.AutoSize = true;
-            this.UserThatDidTheLastChangeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UserThatDidTheLastChangeLbl.Location = new System.Drawing.Point(29, 399);
-            this.UserThatDidTheLastChangeLbl.Name = "UserThatDidTheLastChangeLbl";
-            this.UserThatDidTheLastChangeLbl.Size = new System.Drawing.Size(283, 25);
-            this.UserThatDidTheLastChangeLbl.TabIndex = 20;
-            this.UserThatDidTheLastChangeLbl.Text = "<User that did the last change>";
             // 
             // DeleteUserById
             // 
