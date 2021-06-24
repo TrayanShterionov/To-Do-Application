@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Windows.Forms;
 using ToDoAppM;
 
@@ -13,21 +14,22 @@ namespace Login
             InitializeComponent();
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+   
+
+        private void Login_Load(object sender, EventArgs e)
         {
-            var user = business.Get(1);
 
-            if (user == null)
-            {
-                user = new Users()
-                {
-                    Username = "Admin0",
-                    Password = ""
-                   
-                };
-                business.Add(user);
-            }
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
